@@ -11,7 +11,7 @@ def solution(bin_tree):
 
     # Pre-order traversal, but keep track of depth
     def traverse(root, depth):
-        # visit root, add to hash table with level as key
+        # visit root, add to hash table with depth as key
         if depth in nodes_dict:
             nodes_dict[depth].append(root)
         else:
@@ -21,7 +21,7 @@ def solution(bin_tree):
         if root.right:
             traverse(root.right, depth + 1)
 
-    traverse(bin_tree.root, 0)
+    traverse(bin_tree.root, 0)  # start at root of tree (depth 0)
 
     # Build linked list for each level in hash table, add to result list of linked lists
     for level in nodes_dict:

@@ -62,6 +62,10 @@ class BinTree:
         visited = []
         visit(self.root)  # start at root of tree
         return visited
+
+    def __str__(self) -> str:
+        nodes_list = self.in_order_traversal()
+        return str(nodes_list)
     
 class Node:
     def __init__(self, value, left=None, right=None) -> None:
