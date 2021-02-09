@@ -47,7 +47,7 @@ if __name__ == "__main__":
     test_cases = [
         (['a','b','c','d','e','f'], [('a', 'd'), ('f', 'b'), ('b', 'd'), ('f', 'a'), ('d', 'c')]),  # case 1
          ['f','e','a','b','d','c'],  # case 1 solution
-         ['e','f','a','b','d','c'],  # case 1 alternate solution
+         ['e','f','a','b','d','c'],  # case 1 alternate solution (technically, 'e' can be built at any time as it has no dependencies and is not depended upon)
         (['a','b','c','d','e','f'], [('a', 'd'), ('f', 'b'), ('b', 'd'), ('f', 'a'), ('d', 'c'), ('a', 'f')]),  # case 2 - cyclical, as 'a' depends on 'f', but 'f' depends on 'a'
          None,  # case 2 solution
     ]
